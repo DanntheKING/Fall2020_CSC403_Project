@@ -63,16 +63,6 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ak47 {
-            get {
-                object obj = ResourceManager.GetObject("ak47", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap battle_screen {
             get {
                 object obj = ResourceManager.GetObject("battle_screen", resourceCulture);
@@ -123,11 +113,6 @@ namespace Fall2020_CSC403_Project.Properties {
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
 
-        internal static System.Drawing.Bitmap m16 {
-            get {
-                object obj = ResourceManager.GetObject("m16", resourceCulture);
-
-
         internal static System.Drawing.Bitmap heart
         {
             get{
@@ -140,12 +125,13 @@ namespace Fall2020_CSC403_Project.Properties {
             get {
                 object obj = ResourceManager.GetObject("Game Title", resourceCulture);
 
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
+ 
+
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream main_menu {
@@ -174,7 +160,6 @@ namespace Fall2020_CSC403_Project.Properties {
         
         /// <summary>
 
-
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap player {
@@ -190,46 +175,6 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.IO.UnmanagedMemoryStream walkSound {
             get {
                 return ResourceManager.GetStream("walkSound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap player_ak47 {
-            get {
-                object obj = ResourceManager.GetObject("player_ak47", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap player_m16 {
-            get {
-                object obj = ResourceManager.GetObject("player_m16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap player_sniper {
-            get {
-                object obj = ResourceManager.GetObject("player_sniper", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sniper {
-            get {
-                object obj = ResourceManager.GetObject("sniper", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

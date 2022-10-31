@@ -34,7 +34,6 @@ namespace Fall2020_CSC403_Project {
       UpdateHealthBars();
     }
 
-
     public void SetupForBossBattle() {
       picBossBattle.Location = Point.Empty;
       picBossBattle.Size = ClientSize;
