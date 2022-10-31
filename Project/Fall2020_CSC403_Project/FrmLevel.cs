@@ -4,41 +4,57 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using System.Media;
+using Fall2020_CSC403_Project.Properties;
+
 
 namespace Fall2020_CSC403_Project {
-    public partial class FrmLevel : Form
-    {
-        private Player player;
+  public partial class FrmLevel : Form {
+    private Player player;
 
-        private Enemy enemyPoisonPacket;
-        private Enemy bossKoolaid;
-        private Enemy enemyCheeto;
-        private Weapon weapon;
-        private Character[] walls;
-        
-        private DateTime timeBegin;
-        private FrmBattle frmBattle;
+    private Enemy enemyPoisonPacket;
+    public Enemy bossKoolaid;
+    private Enemy enemyCheeto;
+    private Weapon weapon;
+    private Character[] walls;
+    private Heart hearts;
 
-        public FrmLevel()
-        {
-            InitializeComponent();
-        }
-        //var for weapon iteration
-        int index;
-        private void FrmLevel_Load(object sender, EventArgs e)
-        {
-            const int PADDING = 7;
-            const int NUM_WALLS = 13;
+    private DateTime timeBegin;
+    private FrmBattle frmBattle;
 
+    SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
+    public bool lvlMusicOn;
+    public bool isKoolAidMan = false;
 
-            player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
-            bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
-            enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
-            enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+    public FrmLevel() {
+      InitializeComponent();
+    }
 
-            weapon = new Weapon(CreatePosition(picGun), CreateCollider(picGun, PADDING));
+    private void FrmLevel_Load(object sender, EventArgs e) {
+      const int PADDING = 7;
+      const int NUM_WALLS = 13;
 
-            //Randomizes the weapons that are on the Map
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+      hearts = new Heart(CreatePosition(picHeart), CreateCollider(picHeart, PADDING));
+      bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
+      enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
+      enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+    weapon = new Weapon(CreatePosition(picGun), CreateCollider(picGun, PADDING));
+    
+      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+      enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
+      enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+
+      bossKoolaid.Color = Color.Red;
+      enemyPoisonPacket.Color = Color.Green;
+      enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+
+      // Determine who is the boss of the level
+      bossKoolaid.Boss = true;
+      enemyPoisonPacket.Boss = false;
+      enemyCheeto.Boss = false;
+      
+       //Randomizes the weapons that are on the Map
             Random rand = new Random(DateTime.Now.ToString().GetHashCode());
             var list = new List<string> { "one", "two", "three" };
              index = rand.Next(0,list.Count);
@@ -59,25 +75,16 @@ namespace Fall2020_CSC403_Project {
 
             }
 
-            bossKoolaid.Img = picBossKoolAid.BackgroundImage;
-            enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
-            enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
 
+      walls = new Character[NUM_WALLS];
+      for (int w = 0; w < NUM_WALLS; w++) {
+        PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
+        walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
+      }
 
-            bossKoolaid.Color = Color.Red;
-            enemyPoisonPacket.Color = Color.Green;
-            enemyCheeto.Color = Color.FromArgb(255, 245, 161);
-
-            walls = new Character[NUM_WALLS];
-            for (int w = 0; w < NUM_WALLS; w++)
-            {
-                PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
-                walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
-            }
-
-            Game.player = player;
-            timeBegin = DateTime.Now;
-        }
+      Game.player = player;
+      timeBegin = DateTime.Now;
+    }
 
         private Vector2 CreatePosition(PictureBox pic)
         {
@@ -95,12 +102,14 @@ namespace Fall2020_CSC403_Project {
             player.ResetMoveSpeed();
         }
 
+
         private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
         {
             TimeSpan span = DateTime.Now - timeBegin;
             string time = span.ToString(@"hh\:mm\:ss");
             lblInGameTime.Text = "Time: " + time.ToString();
         }
+
 
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
         {
@@ -126,6 +135,17 @@ namespace Fall2020_CSC403_Project {
             {
                 Fight(bossKoolaid);
             }
+  
+         if (HitAChar(player, hearts) & player.Health != player.MaxHealth){
+          player.Health += 5;
+          picHeart.Location = new Point(1000, 1000);
+            player.MaxHealth = player.Health;
+          System.Console.WriteLine("Hit heart!!!");
+      }
+      if(HitAChar(player, hearts) & player.Health == player.MaxHealth){
+          picHeart.Location = new Point(1000, 1000);
+     
+      }
 
 
             //Picks up weapon if collided with!
@@ -174,31 +194,43 @@ namespace Fall2020_CSC403_Project {
             return hitAWall;
         }
 
+
         private bool HitAChar(Character you, Character other)
         {
             return you.Collider.Intersects(other.Collider);
         }
 
 
-        private void Fight(Enemy enemy)
-        {
-            player.ResetMoveSpeed();
-            player.MoveBack();
-            frmBattle = FrmBattle.GetInstance(enemy);
-            frmBattle.Show();
+    private void Fight(Enemy enemy) {
+      player.ResetMoveSpeed();
+      player.MoveBack();
+      frmBattle = FrmBattle.GetInstance(enemy);
+      frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
+      frmBattle.Show();
 
-            if (enemy == bossKoolaid)
-            {
-                frmBattle.SetupForBossBattle();
-            }
-            //Calls the BoostAttack while in Fight!
+      if (enemy == bossKoolaid) {
+        isKoolAidMan = true;
+        frmBattle.SetupForBossBattle();
+        frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
+      }
+       //Calls the BoostAttack while in Fight!
             if (picGun.Visible == false)
             {
                 BoostAttack(player);
                 picGun.Location = new Point(2000, 2000);
                 picGun.Visible = false;
             }
-        }
+    }
+
+    private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
+      
+      walkSFX.Play(); //walk sound
+
+      switch (e.KeyCode) {
+        case Keys.Left:
+          player.GoLeft();
+          break;
+
 
         private void FrmLevel_KeyDown(object sender, KeyEventArgs e)
         {
@@ -240,5 +272,21 @@ namespace Fall2020_CSC403_Project {
         }
 
     }
+
+
+    public void UpdateSettings(Settings s)
+        {
+            if (s.maxWindow)
+            {
+                s.maximizeWindow(this);
+            }
+
+            lvlMusicOn = s.musicOn;
+        }
+
+    private void lblInGameTime_Click(object sender, EventArgs e) {
+
+    }
+  }
 
 }
