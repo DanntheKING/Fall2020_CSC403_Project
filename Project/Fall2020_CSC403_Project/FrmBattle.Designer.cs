@@ -32,18 +32,14 @@
       this.lblPlayerHealthFull = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
-      this.label3 = new System.Windows.Forms.Label();
       this.lblEnemyHealthFull = new System.Windows.Forms.Label();
       this.picBossBattle = new System.Windows.Forms.PictureBox();
       this.picEnemy = new System.Windows.Forms.PictureBox();
-
-      this.picWeapon = new System.Windows.Forms.PictureBox()
       this.picHeart = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
-     ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
       this.SuspendLayout();
@@ -120,15 +116,6 @@
       this.label2.Size = new System.Drawing.Size(229, 23);
       this.label2.TabIndex = 5;
       // 
-      // label3
-      // 
-      this.label3.BackColor = System.Drawing.Color.White;
-      this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-      this.label3.Location = new System.Drawing.Point(70, 1000);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(150, 150);
-      this.label3.TabIndex = 4;
-      // 
       // lblEnemyHealthFull
       // 
       this.lblEnemyHealthFull.BackColor = System.Drawing.Color.Blue;
@@ -161,18 +148,6 @@
       this.picEnemy.Size = new System.Drawing.Size(229, 267);
       this.picEnemy.TabIndex = 1;
       this.picEnemy.TabStop = false;
-        //
-        //picWeapon
-        //
-        this.picWeapon.BackColor = System.Drawing.Color.WhiteSmoke;
-        this.picWeapon.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.ak47;
-        this.picWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-        this.picWeapon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        this.picWeapon.Location = new System.Drawing.Point(400, 98);
-        this.picWeapon.Name = "picWeapon";
-        this.picWeapon.Size = new System.Drawing.Size(229, 267);
-        this.picWeapon.TabIndex = 1;
-        this.picWeapon.TabStop = false;
       // 
       // picPlayer
       // 
@@ -215,7 +190,6 @@
       this.Controls.Add(this.picBossBattle);
       this.Controls.Add(this.lblEnemyHealthFull);
       this.Controls.Add(this.label2);
-      this.Controls.Add(this.label3);
       this.Controls.Add(this.lblPlayerHealthFull);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.btnAttack);
@@ -223,7 +197,6 @@
       this.Controls.Add(this.btnCounter);
       this.Controls.Add(this.btnFinisher);
       this.Controls.Add(this.picEnemy);
-      this.Controls.Add(this.picWeapon);
       this.Controls.Add(this.picPlayer);
       this.DoubleBuffered = true;
       this.Name = "FrmBattle";
@@ -231,7 +204,6 @@
       this.Text = "Fight!";
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).EndInit();
-         ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
       this.ResumeLayout(false);
@@ -241,7 +213,6 @@
     #endregion
 
     private System.Windows.Forms.PictureBox picPlayer;
-    private System.Windows.Forms.PictureBox picWeapon;
     private System.Windows.Forms.PictureBox picHeart;
     private System.Windows.Forms.PictureBox picEnemy;
     private System.Windows.Forms.Button btnAttack;
@@ -251,7 +222,6 @@
     private System.Windows.Forms.Label lblPlayerHealthFull;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label lblEnemyHealthFull;
     private System.Windows.Forms.PictureBox picBossBattle;
     private System.Windows.Forms.Timer tmrFinalBattle;
