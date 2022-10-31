@@ -13,7 +13,7 @@ Amiyah Frierson:
 
 
 
-Daniel Davis:
+Daniel Davis: I added a heart feature that gives the player 5 health points when the player comes in contact with the heart on the map.
 
 
 
