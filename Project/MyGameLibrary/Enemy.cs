@@ -14,6 +14,11 @@ namespace Fall2020_CSC403_Project.code {
     /// this is the background color for the fight form for this enemy
     /// </summary>
     public Color Color { get; set; }
+        
+    /// <summary>
+    /// this determines whether the enemy is the boss of the level
+    /// <summary>
+    public bool Boss { get; set; }
 
     /// <summary>
     /// 

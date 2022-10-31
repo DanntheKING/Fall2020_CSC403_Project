@@ -45,6 +45,11 @@ namespace Fall2020_CSC403_Project {
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
 
+      // Determine who is the boss of the level
+      bossKoolaid.Boss = true;
+      enemyPoisonPacket.Boss = false;
+      enemyCheeto.Boss = false;
+
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
         PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;

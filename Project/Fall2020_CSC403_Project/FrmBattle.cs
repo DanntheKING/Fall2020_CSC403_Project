@@ -46,6 +46,11 @@ namespace Fall2020_CSC403_Project {
       if (instance == null) {
         instance = new FrmBattle();
         instance.enemy = enemy;
+        if(instance.enemy.Boss == true)
+        {
+          instance.enemy.MaxHealth = 60;
+          instance.enemy.Health = instance.enemy.MaxHealth;
+        }
         instance.Setup();
       }
       return instance;
@@ -62,7 +67,7 @@ namespace Fall2020_CSC403_Project {
       lblPlayerHealthFull.Text = player.Health.ToString();
       lblEnemyHealthFull.Text = enemy.Health.ToString();
     }
-
+    
     private void btnAttack_Click(object sender, EventArgs e) {
       player.OnAttack(-2);
       if (enemy.Health > 0) {
@@ -86,6 +91,7 @@ namespace Fall2020_CSC403_Project {
         {
             UpdateHealthBars();
             instance = null;
+            music.Stop();
             Close();
         }
     }
@@ -100,6 +106,7 @@ namespace Fall2020_CSC403_Project {
         if(player.Health <= 0 || enemy.Health <= 0) 
         { 
             instance = null;
+            music.Stop();
             Close();
         }
     }
@@ -115,6 +122,7 @@ namespace Fall2020_CSC403_Project {
         if(player.Health <= 0 || enemy.Health <= 0) 
         { 
             instance = null;
+            music.Stop();
             Close();
         }
     

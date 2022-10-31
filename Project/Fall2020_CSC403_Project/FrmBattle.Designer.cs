@@ -207,7 +207,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
       this.ResumeLayout(false);
-       
 
     }
 
