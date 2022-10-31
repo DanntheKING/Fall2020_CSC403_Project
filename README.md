@@ -20,6 +20,9 @@ Create a new Windows Form that is called to show when you click the settings but
 
 
 ## Daniel Davis:
+1.) Added the heart image that will be shown the map to so the player has a visual image of a heart
+2.) I placed the heart on the map so the player can walk over the heart to gain health points
+3.) I made the heart worth 5 health points
 
 
 
