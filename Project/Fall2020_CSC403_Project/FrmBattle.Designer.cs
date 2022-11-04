@@ -37,7 +37,7 @@
       this.picBossBattle = new System.Windows.Forms.PictureBox();
       this.picEnemy = new System.Windows.Forms.PictureBox();
 
-      this.picWeapon = new System.Windows.Forms.PictureBox()
+            this.picWeapon = new System.Windows.Forms.PictureBox();
       this.picHeart = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
