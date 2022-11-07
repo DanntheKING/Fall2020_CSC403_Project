@@ -108,6 +108,35 @@ namespace Fall2020_CSC403_Project {
           picHeart.Location = new Point(1000, 1000);
      
       }
+      if (enemyPoisonPacket.Health == 0){
+
+                picEnemyPoisonPacket.Visible = false;
+                enemyPoisonPacket.releaseCollider();
+                picEnemyPoisonPacket.Dispose();
+        
+
+      }
+      if (enemyCheeto.Health == 0)
+      {
+
+          picEnemyCheeto.Visible = false;
+          enemyCheeto.releaseCollider();
+          picEnemyCheeto.Dispose();
+
+      }
+      if (bossKoolaid.Health == 0)
+      {
+
+          picBossKoolAid.Visible = false;
+          bossKoolaid.releaseCollider();
+          picBossKoolAid.Dispose();
+
+      }
+
+
+
+
+
 
 
 
