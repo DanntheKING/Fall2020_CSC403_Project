@@ -9,9 +9,10 @@ using Fall2020_CSC403_Project.Properties;
 
 
 namespace Fall2020_CSC403_Project {
-    
-  public partial class FrmLevel : Form {
-    private Player player;
+
+    public partial class FrmLevel : Form
+    {
+        private Player player;
 
         private Enemy enemyPoisonPacket;
         public Enemy bossKoolaid;
@@ -23,15 +24,19 @@ namespace Fall2020_CSC403_Project {
         private DateTime timeBegin;
         private FrmBattle frmBattle;
 
-    SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
-    public bool lvlMusicOn;
-    public bool isKoolAidMan = false;
+        int index;
 
-    public FrmLevel() {
-      InitializeComponent();
-    }
+        SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
+        public bool lvlMusicOn;
+        public bool isKoolAidMan = false;
 
-        private void FrmLevel_Load(object sender, EventArgs e) {
+        public FrmLevel()
+        {
+            InitializeComponent();
+        }
+
+        private void FrmLevel_Load(object sender, EventArgs e)
+        {
             const int PADDING = 7;
             const int NUM_WALLS = 13;
 
@@ -78,7 +83,8 @@ namespace Fall2020_CSC403_Project {
 
 
             walls = new Character[NUM_WALLS];
-            for (int w = 0; w < NUM_WALLS; w++) {
+            for (int w = 0; w < NUM_WALLS; w++)
+            {
                 PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
                 walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
             }
@@ -137,13 +143,15 @@ namespace Fall2020_CSC403_Project {
                 Fight(bossKoolaid);
             }
 
-            if (HitAChar(player, hearts) & player.Health != player.MaxHealth) {
+            if (HitAChar(player, hearts) & player.Health != player.MaxHealth)
+            {
                 player.Health += 5;
                 picHeart.Location = new Point(1000, 1000);
                 player.MaxHealth = player.Health;
                 System.Console.WriteLine("Hit heart!!!");
             }
-            if (HitAChar(player, hearts) & player.Health == player.MaxHealth) {
+            if (HitAChar(player, hearts) & player.Health == player.MaxHealth)
+            {
                 picHeart.Location = new Point(1000, 1000);
 
             }
@@ -202,60 +210,55 @@ namespace Fall2020_CSC403_Project {
         }
 
 
-        private void Fight(Enemy enemy) {
+        private void Fight(Enemy enemy)
+        {
             player.ResetMoveSpeed();
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(enemy);
             frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
             frmBattle.Show();
 
-      if (enemy == bossKoolaid) {
-        isKoolAidMan = true;
-        frmBattle.SetupForBossBattle();
-        frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
-      }
-       //Calls the BoostAttack while in Fight!
+            if (enemy == bossKoolaid)
+            {
+                isKoolAidMan = true;
+                frmBattle.SetupForBossBattle();
+                frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
+            }
+            //Calls the BoostAttack while in Fight!
             if (picGun.Visible == false)
             {
                 BoostAttack(player);
                 picGun.Location = new Point(2000, 2000);
                 picGun.Visible = false;
             }
-    }
-
-    private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
-      
-      walkSFX.Play(); //walk sound
-
-      switch (e.KeyCode) {
-        case Keys.Left:
-          player.GoLeft();
-          break;
-
+        }
 
         private void FrmLevel_KeyDown(object sender, KeyEventArgs e)
         {
+
+            walkSFX.Play(); //walk sound
+
             switch (e.KeyCode)
             {
                 case Keys.Left:
                     player.GoLeft();
                     break;
 
-        case Keys.Right:
-            player.GoRight();
-            break;
+                case Keys.Right:
+                    player.GoRight();
+                    break;
 
-        case Keys.Up:
-            player.GoUp();
-            break;
+                case Keys.Up:
+                    player.GoUp();
+                    break;
 
-        case Keys.Down:
-            player.GoDown();
-            break;
+                case Keys.Down:
+                    player.GoDown();
+                    break;
 
-        default:
-            player.ResetMoveSpeed();
-            break;
+                default:
+                    player.ResetMoveSpeed();
+                    break;
             }
         }
 
@@ -272,7 +275,7 @@ namespace Fall2020_CSC403_Project {
             this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
         }
 
-    }
+
 
 
         public void UpdateSettings(Settings s)
@@ -285,9 +288,9 @@ namespace Fall2020_CSC403_Project {
             lvlMusicOn = s.musicOn;
         }
 
-    private void lblInGameTime_Click(object sender, EventArgs e) {
+        private void picWall1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
-
-  
 }

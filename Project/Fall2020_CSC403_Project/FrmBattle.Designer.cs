@@ -36,14 +36,11 @@
       this.lblEnemyHealthFull = new System.Windows.Forms.Label();
       this.picBossBattle = new System.Windows.Forms.PictureBox();
       this.picEnemy = new System.Windows.Forms.PictureBox();
-
-      this.picWeapon = new System.Windows.Forms.PictureBox()
       this.picHeart = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
-     ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
       this.SuspendLayout();
@@ -161,18 +158,6 @@
       this.picEnemy.Size = new System.Drawing.Size(229, 267);
       this.picEnemy.TabIndex = 1;
       this.picEnemy.TabStop = false;
-        //
-        //picWeapon
-        //
-        this.picWeapon.BackColor = System.Drawing.Color.WhiteSmoke;
-        this.picWeapon.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.ak47;
-        this.picWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-        this.picWeapon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        this.picWeapon.Location = new System.Drawing.Point(400, 98);
-        this.picWeapon.Name = "picWeapon";
-        this.picWeapon.Size = new System.Drawing.Size(229, 267);
-        this.picWeapon.TabIndex = 1;
-        this.picWeapon.TabStop = false;
       // 
       // picPlayer
       // 
@@ -223,7 +208,6 @@
       this.Controls.Add(this.btnCounter);
       this.Controls.Add(this.btnFinisher);
       this.Controls.Add(this.picEnemy);
-      this.Controls.Add(this.picWeapon);
       this.Controls.Add(this.picPlayer);
       this.DoubleBuffered = true;
       this.Name = "FrmBattle";
@@ -231,7 +215,6 @@
       this.Text = "Fight!";
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).EndInit();
-         ((System.ComponentModel.ISupportInitialize)(this.picWeapon)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
       this.ResumeLayout(false);
