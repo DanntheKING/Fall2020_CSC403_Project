@@ -9,6 +9,7 @@ using Fall2020_CSC403_Project.Properties;
 
 
 namespace Fall2020_CSC403_Project {
+    
   public partial class FrmLevel : Form {
     private Player player;
 
@@ -21,6 +22,8 @@ namespace Fall2020_CSC403_Project {
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;
+
+    int index;
 
     SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
     public bool lvlMusicOn;
@@ -149,7 +152,7 @@ namespace Fall2020_CSC403_Project {
 
 
             //Picks up weapon if collided with!
-            if ((HitAChar(player, weapon) && index == 0))
+            if ((HitAChar(player, weapon) && (index == 0)))
             {
                 picGun.Visible = false;
                 //this.picGun.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.null;
@@ -158,7 +161,7 @@ namespace Fall2020_CSC403_Project {
                 this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_ak47;
             }
 
-            if ((HitAChar(player, weapon) && index == 1))
+            if ((HitAChar(player, weapon) && (index == 1)))
             {
                 picGun.Visible = false;
                 //this.picGun.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.null;
@@ -168,7 +171,7 @@ namespace Fall2020_CSC403_Project {
                 this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_m16;
             }
 
-            if ((HitAChar(player, weapon) && index == 2))
+            if ((HitAChar(player, weapon) && (index == 2)))
             {
                 picGun.Visible = false;
                 this.picGun.Location = new System.Drawing.Point(-500, -500);
@@ -214,12 +217,12 @@ namespace Fall2020_CSC403_Project {
         frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
       }
        //Calls the BoostAttack while in Fight!
-            if (picGun.Visible == false)
-            {
-                BoostAttack(player);
-                picGun.Location = new Point(2000, 2000);
-                picGun.Visible = false;
-            }
+        if (picGun.Visible == false)
+        {
+            BoostAttack(player);
+            picGun.Location = new Point(2000, 2000);
+            picGun.Visible = true;
+        }
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
@@ -232,29 +235,21 @@ namespace Fall2020_CSC403_Project {
           break;
 
 
-        private void FrmLevel_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyCode)
-            {
-                case Keys.Left:
-                    player.GoLeft();
-                    break;
+        case Keys.Right:
+            player.GoRight();
+            break;
 
-                case Keys.Right:
-                    player.GoRight();
-                    break;
+        case Keys.Up:
+            player.GoUp();
+            break;
 
-                case Keys.Up:
-                    player.GoUp();
-                    break;
+        case Keys.Down:
+            player.GoDown();
+            break;
 
-                case Keys.Down:
-                    player.GoDown();
-                    break;
-
-                default:
-                    player.ResetMoveSpeed();
-                    break;
+        default:
+            player.ResetMoveSpeed();
+            break;
             }
         }
 
@@ -271,7 +266,7 @@ namespace Fall2020_CSC403_Project {
             this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
         }
 
-    }
+    
 
 
     public void UpdateSettings(Settings s)
@@ -284,9 +279,6 @@ namespace Fall2020_CSC403_Project {
             lvlMusicOn = s.musicOn;
         }
 
-    private void lblInGameTime_Click(object sender, EventArgs e) {
-
     }
-  }
 
 }

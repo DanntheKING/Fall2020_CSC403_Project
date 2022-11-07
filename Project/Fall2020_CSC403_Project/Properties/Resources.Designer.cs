@@ -123,10 +123,14 @@ namespace Fall2020_CSC403_Project.Properties {
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
 
-        internal static System.Drawing.Bitmap m16 {
-            get {
+        internal static System.Drawing.Bitmap m16
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("m16", resourceCulture);
-
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
 
         internal static System.Drawing.Bitmap heart
         {
