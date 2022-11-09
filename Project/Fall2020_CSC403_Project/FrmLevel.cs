@@ -23,6 +23,10 @@ namespace Fall2020_CSC403_Project {
     public bool lvlMusicOn;
     public bool isKoolAidMan = false;
 
+    private int getMaxHealth;
+    private double okayHealth;
+    private double dangerHealth;
+
     public FrmLevel() {
       InitializeComponent();
     }
@@ -53,6 +57,14 @@ namespace Fall2020_CSC403_Project {
 
       Game.player = player;
       timeBegin = DateTime.Now;
+
+      getMaxHealth = player.MaxHealth;
+      double getHealth = (double)getMaxHealth; //cast for operations below
+
+      okayHealth = 0.6 * getHealth;
+      dangerHealth = 0.3 * getHealth;
+
+      UpdateHealthText();
     }
 
     private Vector2 CreatePosition(PictureBox pic) {
@@ -96,15 +108,14 @@ namespace Fall2020_CSC403_Project {
       if (HitAChar(player, hearts) & player.Health != player.MaxHealth){
           player.Health += 5;
           picHeart.Location = new Point(1000, 1000);
-            player.MaxHealth = player.Health;
+          player.MaxHealth = player.Health;
           System.Console.WriteLine("Hit heart!!!");
       }
       if(HitAChar(player, hearts) & player.Health == player.MaxHealth){
           picHeart.Location = new Point(1000, 1000);
+          UpdateHealthText();
      
       }
-
-
 
             // update player's picture box
             picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
@@ -129,6 +140,7 @@ namespace Fall2020_CSC403_Project {
       player.ResetMoveSpeed();
       player.MoveBack();
       frmBattle = FrmBattle.GetInstance(enemy);
+      frmBattle.level = this;
       frmBattle.UpdateSettings(lvlMusicOn, isKoolAidMan);
       frmBattle.Show();
 
@@ -176,8 +188,26 @@ namespace Fall2020_CSC403_Project {
             lvlMusicOn = s.musicOn;
         }
 
-    private void lblInGameTime_Click(object sender, EventArgs e) {
+    public void UpdateHealthText()
+        {
+            string playerHealth = Convert.ToString(player.Health);
 
+            if (player.Health <= dangerHealth)
+            {
+                label1.ForeColor = Color.Red;
+            }
+            else if (player.Health <= okayHealth)
+            {
+                label1.ForeColor = Color.Orange;
+            }
+            else
+            {
+                label1.ForeColor = Color.LawnGreen;
+            }
+
+            Console.WriteLine(Convert.ToString(player.MaxHealth));
+
+            label1.Text = "Health: " + playerHealth;
+        }
     }
-  }
 }

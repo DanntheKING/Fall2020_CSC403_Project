@@ -14,6 +14,8 @@ namespace Fall2020_CSC403_Project {
     public bool battleMusicOn;
     private SoundPlayer music;
 
+    public FrmLevel level;
+
     private FrmBattle() {
       InitializeComponent();
       player = Game.player;
@@ -74,9 +76,9 @@ namespace Fall2020_CSC403_Project {
       UpdateHealthBars();
       if (player.Health <= 0 || enemy.Health <= 0) {
         instance = null;
-        music.Stop(); //stop any music playing
         Close();
       }
+
     }
 
     // Retreat button
@@ -155,6 +157,12 @@ namespace Fall2020_CSC403_Project {
             {
                 PlayNonBossMusic();
             }
+        }
+
+    private void FrmBattle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            music.Stop(); //stop any music playing
+            level.UpdateHealthText(); //update player health text every time a form closes
         }
     }
 }
