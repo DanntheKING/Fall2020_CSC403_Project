@@ -272,7 +272,7 @@ namespace Fall2020_CSC403_Project {
 
         }
         //Boosts attack when the Player has picked up weapon
-        //Weapon is a one time use Instant Kill
+        //Weapon is a one time use.
         private void BoostAttack(Player player)
         {
             player.OnAttack(-8);
