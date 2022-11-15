@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
 using Fall2020_CSC403_Project.Properties;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace Fall2020_CSC403_Project {
 
@@ -34,11 +34,10 @@ namespace Fall2020_CSC403_Project {
         {
             InitializeComponent();
         }
-
         private void FrmLevel_Load(object sender, EventArgs e)
         {
             const int PADDING = 7;
-            const int NUM_WALLS = 13;
+            const int NUM_WALLS = 25;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             hearts = new Heart(CreatePosition(picHeart), CreateCollider(picHeart, PADDING));
@@ -59,6 +58,7 @@ namespace Fall2020_CSC403_Project {
             bossKoolaid.Boss = true;
             enemyPoisonPacket.Boss = false;
             enemyCheeto.Boss = false;
+
 
             //Randomizes the weapons that are on the Map
             Random rand = new Random(DateTime.Now.ToString().GetHashCode());
@@ -121,6 +121,18 @@ namespace Fall2020_CSC403_Project {
       if (HitAWall(player)) {
         player.MoveBack();
       }
+
+
+            //Player goes faster if shift key is pressed
+            if (Control.ModifierKeys == Keys.Shift)
+            {
+                this.tmrPlayerMove.Interval = 2;
+            }
+                // check collision with walls
+                if (HitAWall(player))
+            {
+                player.MoveBack();
+            }
 
 
             // check collision with enemies
@@ -251,13 +263,15 @@ namespace Fall2020_CSC403_Project {
             }
         }
 
-        private void lblInGameTime_Click(object sender, EventArgs e)
+      
+        //Boosts attack when the Player has picked up weapon
+        //Weapon is a one time use.
+        private void BoostAttack(Player player)
         {
-
-
-        case Keys.Down:
-          player.GoDown();
-          break;
+            player.OnAttack(-8);
+            this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
+            this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
+        }
 
 
 
@@ -274,10 +288,6 @@ namespace Fall2020_CSC403_Project {
             lvlMusicOn = s.musicOn;
         }
 
-        private void picWall1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
