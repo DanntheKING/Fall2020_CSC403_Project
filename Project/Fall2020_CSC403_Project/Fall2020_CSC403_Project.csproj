@@ -52,11 +52,23 @@
     <Compile Include="FrmBattle.Designer.cs">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDeath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeath.Designer.cs">
+      <DependentUpon>FrmDeath.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLevel.Designer.cs">
       <DependentUpon>FrmLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPause.Designer.cs">
+      <DependentUpon>FrmPause.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -75,8 +87,14 @@
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeath.resx">
+      <DependentUpon>FrmDeath.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPause.resx">
+      <DependentUpon>FrmPause.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -185,6 +203,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data\walkSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\deathTheme.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

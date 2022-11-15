@@ -18,6 +18,7 @@ namespace Fall2020_CSC403_Project {
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;
+    public MainMenu getMainMenu;
 
     SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
     public bool lvlMusicOn;
@@ -26,6 +27,8 @@ namespace Fall2020_CSC403_Project {
     private int getMaxHealth;
     private double okayHealth;
     private double dangerHealth;
+
+    public int countEnemies = 4;
 
     public FrmLevel() {
       InitializeComponent();
@@ -170,6 +173,12 @@ namespace Fall2020_CSC403_Project {
 
         case Keys.Down:
           player.GoDown();
+          break;       
+        
+        case Keys.Escape:
+          FrmPause pauseMenu = new FrmPause();
+          pauseMenu.Show();
+          pauseMenu.getGameLevel = this;
           break;
 
         default:
@@ -186,6 +195,7 @@ namespace Fall2020_CSC403_Project {
             }
 
             lvlMusicOn = s.musicOn;
+
         }
 
     public void UpdateHealthText()
@@ -209,5 +219,11 @@ namespace Fall2020_CSC403_Project {
 
             label1.Text = "Health: " + playerHealth;
         }
+    
+    public void UpdateEnemyTracker()
+        {
+            label2.Text = "Enemies remaining: " + Convert.ToString(countEnemies);
+        }
     }
+
 }

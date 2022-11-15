@@ -41,7 +41,7 @@ namespace Fall2020_CSC403_Project
             {
                 maxWindow = false;
                 minimizeWindow(this);
-                minimizeWindow(Menu);
+                maximizeWindow(Menu);
             }
         }
 

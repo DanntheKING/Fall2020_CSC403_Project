@@ -15,7 +15,7 @@ namespace Fall2020_CSC403_Project
     public partial class MainMenu : Form
     {
         public SoundPlayer menuMusic = new SoundPlayer(Resources.main_menu);
-        Settings changeSettings = new Settings();
+        public Settings changeSettings = new Settings();
 
         public MainMenu()
         {
@@ -32,6 +32,7 @@ namespace Fall2020_CSC403_Project
 
             newGame.UpdateSettings(changeSettings);
             newGame.Show();
+            newGame.getMainMenu = this;
             
             menuMusic.Stop();
 
@@ -41,7 +42,7 @@ namespace Fall2020_CSC403_Project
         //Quit
         private void button3_Click(object sender, EventArgs e) 
         {
-            Close();
+            Application.Exit();
         }
 
         //Open Settings
