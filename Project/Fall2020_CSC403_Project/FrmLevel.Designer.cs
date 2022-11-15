@@ -146,7 +146,7 @@
             // picWall3
             // 
             this.picWall3.BackColor = System.Drawing.Color.Transparent;
-            this.picWall3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall3.Location = new System.Drawing.Point(44, 723);
             this.picWall3.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
@@ -206,7 +206,7 @@
             // picWall5
             // 
             this.picWall5.BackColor = System.Drawing.Color.Transparent;
-            this.picWall5.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall5.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall5.Location = new System.Drawing.Point(4, 1578);
             this.picWall5.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
@@ -218,7 +218,7 @@
             // picWall4
             // 
             this.picWall4.BackColor = System.Drawing.Color.Transparent;
-            this.picWall4.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall4.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall4.Location = new System.Drawing.Point(202, 830);
             this.picWall4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -230,7 +230,7 @@
             // picWall12
             // 
             this.picWall12.BackColor = System.Drawing.Color.Transparent;
-            this.picWall12.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall12.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall12.Location = new System.Drawing.Point(1159, 279);
             this.picWall12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -242,7 +242,7 @@
             // picWall6
             // 
             this.picWall6.BackColor = System.Drawing.Color.Transparent;
-            this.picWall6.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall6.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall6.Location = new System.Drawing.Point(603, 1261);
             this.picWall6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -254,7 +254,7 @@
             // picWall9
             // 
             this.picWall9.BackColor = System.Drawing.Color.Transparent;
-            this.picWall9.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall9.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall9.Location = new System.Drawing.Point(704, 442);
             this.picWall9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -266,7 +266,7 @@
             // picWall10
             // 
             this.picWall10.BackColor = System.Drawing.Color.Transparent;
-            this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall10.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall10.Location = new System.Drawing.Point(685, 700);
             this.picWall10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -278,7 +278,7 @@
             // picWall0
             // 
             this.picWall0.BackColor = System.Drawing.Color.Transparent;
-            this.picWall0.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall0.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall0.Location = new System.Drawing.Point(-42, -7);
             this.picWall0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -290,7 +290,7 @@
             // picWall7
             // 
             this.picWall7.BackColor = System.Drawing.Color.Transparent;
-            this.picWall7.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall7.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall7.Location = new System.Drawing.Point(44, 983);
             this.picWall7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -302,7 +302,7 @@
             // picWall8
             // 
             this.picWall8.BackColor = System.Drawing.Color.Transparent;
-            this.picWall8.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall8.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall8.Location = new System.Drawing.Point(1879, 51);
             this.picWall8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -314,7 +314,7 @@
             // picWall1
             // 
             this.picWall1.BackColor = System.Drawing.Color.Transparent;
-            this.picWall1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall1.Location = new System.Drawing.Point(32, -7);
             this.picWall1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -326,7 +326,7 @@
             // picWall2
             // 
             this.picWall2.BackColor = System.Drawing.Color.Transparent;
-            this.picWall2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall2.Location = new System.Drawing.Point(861, -7);
             this.picWall2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -338,7 +338,7 @@
             // picWall11
             // 
             this.picWall11.BackColor = System.Drawing.Color.Transparent;
-            this.picWall11.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall11.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall11.Location = new System.Drawing.Point(342, 279);
             this.picWall11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -361,7 +361,7 @@
             // picWall13
             // 
             this.picWall13.BackColor = System.Drawing.Color.Transparent;
-            this.picWall13.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall13.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall13.Location = new System.Drawing.Point(803, 983);
             this.picWall13.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -373,7 +373,7 @@
             // picWall14
             // 
             this.picWall14.BackColor = System.Drawing.Color.Transparent;
-            this.picWall14.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall14.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall14.Location = new System.Drawing.Point(-42, 611);
             this.picWall14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -385,7 +385,7 @@
             // picWall15
             // 
             this.picWall15.BackColor = System.Drawing.Color.Transparent;
-            this.picWall15.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall15.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall15.Location = new System.Drawing.Point(1630, -7);
             this.picWall15.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -397,7 +397,7 @@
             // picWall16
             // 
             this.picWall16.BackColor = System.Drawing.Color.Transparent;
-            this.picWall16.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall16.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall16.Location = new System.Drawing.Point(1879, 624);
             this.picWall16.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -409,7 +409,7 @@
             // picWall17
             // 
             this.picWall17.BackColor = System.Drawing.Color.Transparent;
-            this.picWall17.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall17.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall17.Location = new System.Drawing.Point(1549, 983);
             this.picWall17.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -421,7 +421,7 @@
             // picWall18
             // 
             this.picWall18.BackColor = System.Drawing.Color.Transparent;
-            this.picWall18.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall18.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall18.Location = new System.Drawing.Point(44, 795);
             this.picWall18.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
@@ -433,7 +433,7 @@
             // picWall19
             // 
             this.picWall19.BackColor = System.Drawing.Color.Transparent;
-            this.picWall19.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall19.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall19.Location = new System.Drawing.Point(633, 51);
             this.picWall19.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -445,7 +445,7 @@
             // picWall20
             // 
             this.picWall20.BackColor = System.Drawing.Color.Transparent;
-            this.picWall20.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall20.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall20.Location = new System.Drawing.Point(611, 700);
             this.picWall20.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -457,7 +457,7 @@
             // picWall21
             // 
             this.picWall21.BackColor = System.Drawing.Color.Transparent;
-            this.picWall21.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall21.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall21.Location = new System.Drawing.Point(1437, 700);
             this.picWall21.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -469,7 +469,7 @@
             // picWall22
             // 
             this.picWall22.BackColor = System.Drawing.Color.Transparent;
-            this.picWall22.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall22.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall22.Location = new System.Drawing.Point(1501, 51);
             this.picWall22.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -481,7 +481,7 @@
             // picWall23
             // 
             this.picWall23.BackColor = System.Drawing.Color.Transparent;
-            this.picWall23.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall23.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall23.Location = new System.Drawing.Point(1501, 397);
             this.picWall23.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -493,7 +493,7 @@
             // picWall24
             // 
             this.picWall24.BackColor = System.Drawing.Color.Transparent;
-            this.picWall24.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.picWall24.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall24.Location = new System.Drawing.Point(1663, 700);
             this.picWall24.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);

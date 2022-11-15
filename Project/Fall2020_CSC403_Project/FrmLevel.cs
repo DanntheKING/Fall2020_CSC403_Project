@@ -277,7 +277,7 @@ namespace Fall2020_CSC403_Project {
         {
             player.OnAttack(-8);
             this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
-            this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.wall;
+            this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
         }
 
 
