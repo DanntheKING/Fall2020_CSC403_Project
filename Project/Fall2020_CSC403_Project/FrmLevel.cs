@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using System.Media;
 using Fall2020_CSC403_Project.Properties;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace Fall2020_CSC403_Project {
 
@@ -34,11 +34,10 @@ namespace Fall2020_CSC403_Project {
         {
             InitializeComponent();
         }
-
         private void FrmLevel_Load(object sender, EventArgs e)
         {
             const int PADDING = 7;
-            const int NUM_WALLS = 13;
+            const int NUM_WALLS = 25;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             hearts = new Heart(CreatePosition(picHeart), CreateCollider(picHeart, PADDING));
@@ -59,6 +58,7 @@ namespace Fall2020_CSC403_Project {
             bossKoolaid.Boss = true;
             enemyPoisonPacket.Boss = false;
             enemyCheeto.Boss = false;
+
 
             //Randomizes the weapons that are on the Map
             Random rand = new Random(DateTime.Now.ToString().GetHashCode());
@@ -123,8 +123,13 @@ namespace Fall2020_CSC403_Project {
             // move player
             player.Move();
 
-            // check collision with walls
-            if (HitAWall(player))
+            //Player goes faster if shift key is pressed
+            if (Control.ModifierKeys == Keys.Shift)
+            {
+                this.tmrPlayerMove.Interval = 2;
+            }
+                // check collision with walls
+                if (HitAWall(player))
             {
                 player.MoveBack();
             }
@@ -288,9 +293,5 @@ namespace Fall2020_CSC403_Project {
             lvlMusicOn = s.musicOn;
         }
 
-        private void picWall1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

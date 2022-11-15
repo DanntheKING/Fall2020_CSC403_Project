@@ -175,4 +175,7 @@
   <data name="sniper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\sniper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stone_wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Downloads\Stone_wall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
