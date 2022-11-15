@@ -10,22 +10,36 @@ namespace Fall2020_CSC403_Project.code {
   public class BattleCharacter : Character {
     public int Health { get; set; }
     public int MaxHealth { get; set; }
+    public int Armors { get; set; }
+    public int MaxArmor { get; set; }
     private float strength;
 
     public event Action<int> AttackEvent;
 
     public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
       MaxHealth = 100;
+      MaxArmor = 50;
       strength = 2;
       Health = MaxHealth;
+      Armors = MaxArmor;
+      
+
+      
+        
     }
 
     public void OnAttack(int amount) {
       AttackEvent((int)(amount * strength));
     }
 
-    public void AlterHealth(int amount) {
+  
+        public void AlterHealth(int amount) {
       Health += amount;
     }
+
+    public void AlterArmor(int amount)
+        {
+            Armors += amount;
+        }
   }
 }

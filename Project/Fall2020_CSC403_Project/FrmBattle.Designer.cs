@@ -30,6 +30,7 @@
       this.btnCounter = new System.Windows.Forms.Button();
       this.btnFinisher = new System.Windows.Forms.Button();
       this.lblPlayerHealthFull = new System.Windows.Forms.Label();
+      this.lblPlayerArmorFull = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
       this.lblEnemyHealthFull = new System.Windows.Forms.Label();
@@ -93,10 +94,21 @@
       this.lblPlayerHealthFull.BackColor = System.Drawing.Color.Blue;
       this.lblPlayerHealthFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblPlayerHealthFull.ForeColor = System.Drawing.Color.White;
-      this.lblPlayerHealthFull.Location = new System.Drawing.Point(71, 60);
+      this.lblPlayerHealthFull.Location = new System.Drawing.Point(71, 80);
       this.lblPlayerHealthFull.Name = "lblPlayerHealthFull";
       this.lblPlayerHealthFull.Size = new System.Drawing.Size(226, 20);
       this.lblPlayerHealthFull.TabIndex = 3;
+      //
+      // lblPlayerArmorFull
+      // 
+      this.lblPlayerArmorFull.BackColor = System.Drawing.Color.Red;
+      this.lblPlayerArmorFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblPlayerArmorFull.ForeColor = System.Drawing.Color.White;
+      this.lblPlayerArmorFull.Location = new System.Drawing.Point(71, 60);
+      this.lblPlayerArmorFull.Name = "lblPlayerArmorFull";
+      this.lblPlayerArmorFull.Size = new System.Drawing.Size(226, 20);
+      this.lblPlayerArmorFull.TabIndex = 3;
+
       // 
       // label1
       // 
@@ -191,6 +203,7 @@
       this.Controls.Add(this.lblEnemyHealthFull);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.lblPlayerHealthFull);
+      this.Controls.Add(this.lblPlayerArmorFull);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.btnAttack);
       this.Controls.Add(this.btnRetreat);
@@ -220,6 +233,7 @@
     private System.Windows.Forms.Button btnCounter;
     private System.Windows.Forms.Button btnFinisher;
     private System.Windows.Forms.Label lblPlayerHealthFull;
+    private System.Windows.Forms.Label lblPlayerArmorFull;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label lblEnemyHealthFull;

@@ -15,6 +15,8 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyCheeto;
     private Character[] walls;
     private Heart hearts;
+    private Heart twoHeart;
+    private Armor armor;
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;
@@ -33,6 +35,8 @@ namespace Fall2020_CSC403_Project {
 
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
       hearts = new Heart(CreatePosition(picHeart), CreateCollider(picHeart, PADDING));
+      twoHeart = new Heart(CreatePosition(picHeart2), CreateCollider(picHeart2, PADDING));
+      armor = new Armor(CreatePosition(picArmor), CreateCollider(picArmor, PADDING));
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
@@ -98,22 +102,47 @@ namespace Fall2020_CSC403_Project {
       if (HitAChar(player, bossKoolaid)) {
         Fight(bossKoolaid);
       }
-      if (HitAChar(player, hearts) & player.Health != player.MaxHealth){
-          player.Health += 5;
-          picHeart.Location = new Point(1000, 1000);
-            player.MaxHealth = player.Health;
-          System.Console.WriteLine("Hit heart!!!");
+      while (player.Health < 200 & HitAChar(player, hearts))
+      {
+          if (HitAChar(player, hearts) & player.Health != player.MaxHealth)
+          {
+              player.Health += 5;
+              picHeart.Location = new Point(1000, 1000);
+              player.MaxHealth = 200;
+              // player.MaxHealth = player.Health;
+              System.Console.WriteLine("Hit heart!!!");
+          }
       }
       if(HitAChar(player, hearts) & player.Health == player.MaxHealth){
           picHeart.Location = new Point(1000, 1000);
      
       }
+      if (HitAChar(player, bossKoolaid))
+      {
+          Fight(bossKoolaid);
+      }
+      while (player.Health < 200 & HitAChar(player, twoHeart))
+      {
+          if (HitAChar(player, twoHeart) & player.Health != player.MaxHealth)
+          {
+              player.Health += 5;
+              picHeart2.Location = new Point(1000, 1000);
+              player.MaxHealth = 200;
+              // player.MaxHealth = player.Health
+              System.Console.WriteLine("Hit heart!!!");
+          }
+      }
+      if (HitAChar(player, twoHeart) & player.Health == player.MaxHealth)
+      {
+          picHeart2.Location = new Point(1000, 1000);
+
+      }
       if (enemyPoisonPacket.Health == 0){
 
-                picEnemyPoisonPacket.Visible = false;
-                enemyPoisonPacket.releaseCollider();
-                picEnemyPoisonPacket.Dispose();
-        
+          picEnemyPoisonPacket.Visible = false;
+          enemyPoisonPacket.releaseCollider();
+          picEnemyPoisonPacket.Dispose();
+      
 
       }
       if (enemyCheeto.Health == 0)
@@ -131,6 +160,15 @@ namespace Fall2020_CSC403_Project {
           bossKoolaid.releaseCollider();
           picBossKoolAid.Dispose();
 
+      }
+      if(HitAChar(player, armor) & player.Armors < 50)
+      {
+          System.Console.WriteLine("Hit ARMOR!!!");
+          player.Armors += 5;
+          player.MaxArmor = 50;
+          picArmor.Location = new Point(1000, 1000);
+          
+                
       }
 
 

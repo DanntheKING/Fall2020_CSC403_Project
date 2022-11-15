@@ -154,6 +154,8 @@
   <ItemGroup>
     <None Include="data\hurtSFX.wav" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="data\armor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
