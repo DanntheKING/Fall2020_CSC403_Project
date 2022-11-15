@@ -1,18 +1,18 @@
 ﻿using Fall2020_CSC403_Project.code;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using System.Media;
 using Fall2020_CSC403_Project.Properties;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Fall2020_CSC403_Project {
 
+
     public partial class FrmLevel : Form
     {
         private Player player;
+
 
         private Enemy enemyPoisonPacket;
         public Enemy bossKoolaid;
@@ -82,6 +82,7 @@ namespace Fall2020_CSC403_Project {
             }
 
 
+
             walls = new Character[NUM_WALLS];
             for (int w = 0; w < NUM_WALLS; w++)
             {
@@ -93,35 +94,34 @@ namespace Fall2020_CSC403_Project {
             timeBegin = DateTime.Now;
         }
 
-        private Vector2 CreatePosition(PictureBox pic)
-        {
-            return new Vector2(pic.Location.X, pic.Location.Y);
-        }
+    private Vector2 CreatePosition(PictureBox pic) {
+      return new Vector2(pic.Location.X, pic.Location.Y);
+    }
 
-        private Collider CreateCollider(PictureBox pic, int padding)
-        {
-            Rectangle rect = new Rectangle(pic.Location, new Size(pic.Size.Width - padding, pic.Size.Height - padding));
-            return new Collider(rect);
-        }
+    private Collider CreateCollider(PictureBox pic, int padding) {
+      Rectangle rect = new Rectangle(pic.Location, new Size(pic.Size.Width - padding, pic.Size.Height - padding));
+      return new Collider(rect);
+    }
 
-        private void FrmLevel_KeyUp(object sender, KeyEventArgs e)
-        {
-            player.ResetMoveSpeed();
-        }
+    private void FrmLevel_KeyUp(object sender, KeyEventArgs e) {
+      player.ResetMoveSpeed();
+    }
 
+    private void tmrUpdateInGameTime_Tick(object sender, EventArgs e) {
+      TimeSpan span = DateTime.Now - timeBegin;
+      string time = span.ToString(@"hh\:mm\:ss");
+      lblInGameTime.Text = "Time: " + time.ToString();
+    }
 
-        private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
-        {
-            TimeSpan span = DateTime.Now - timeBegin;
-            string time = span.ToString(@"hh\:mm\:ss");
-            lblInGameTime.Text = "Time: " + time.ToString();
-        }
+    private void tmrPlayerMove_Tick(object sender, EventArgs e) {
+      // move player
+      player.Move();
 
+      // check collision with walls
+      if (HitAWall(player)) {
+        player.MoveBack();
+      }
 
-        private void tmrPlayerMove_Tick(object sender, EventArgs e)
-        {
-            // move player
-            player.Move();
 
             //Player goes faster if shift key is pressed
             if (Control.ModifierKeys == Keys.Shift)
@@ -133,6 +133,7 @@ namespace Fall2020_CSC403_Project {
             {
                 player.MoveBack();
             }
+
 
             // check collision with enemies
             if (HitAChar(player, enemyPoisonPacket))
@@ -190,30 +191,25 @@ namespace Fall2020_CSC403_Project {
                 this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_sniper;
             }
 
+
             // update player's picture box
             picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+    }
+
+    private bool HitAWall(Character c) {
+      bool hitAWall = false;
+      for (int w = 0; w < walls.Length; w++) {
+        if (c.Collider.Intersects(walls[w].Collider)) {
+          hitAWall = true;
+          break;
         }
+      }
+      return hitAWall;
+    }
 
-        private bool HitAWall(Character c)
-        {
-            bool hitAWall = false;
-            for (int w = 0; w < walls.Length; w++)
-            {
-                if (c.Collider.Intersects(walls[w].Collider))
-                {
-                    hitAWall = true;
-                    break;
-                }
-            }
-            return hitAWall;
-        }
-
-
-        private bool HitAChar(Character you, Character other)
-        {
-            return you.Collider.Intersects(other.Collider);
-        }
-
+    private bool HitAChar(Character you, Character other) {
+      return you.Collider.Intersects(other.Collider);
+    }
 
         private void Fight(Enemy enemy)
         {
@@ -267,10 +263,7 @@ namespace Fall2020_CSC403_Project {
             }
         }
 
-        private void lblInGameTime_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         //Boosts attack when the Player has picked up weapon
         //Weapon is a one time use.
         private void BoostAttack(Player player)
@@ -283,7 +276,9 @@ namespace Fall2020_CSC403_Project {
 
 
 
+
         public void UpdateSettings(Settings s)
+
         {
             if (s.maxWindow)
             {
@@ -294,4 +289,5 @@ namespace Fall2020_CSC403_Project {
         }
 
     }
+
 }
