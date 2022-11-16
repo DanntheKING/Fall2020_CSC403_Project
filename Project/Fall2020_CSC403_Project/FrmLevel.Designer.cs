@@ -141,7 +141,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Fall2020_CSC403_Project.Properties.Resources.villager;
-            this.pictureBox2.Location = new System.Drawing.Point(770, 758);
+            this.pictureBox2.Location = new System.Drawing.Point(770, 200);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(197, 182);
