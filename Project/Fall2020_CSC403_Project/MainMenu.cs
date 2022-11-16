@@ -32,7 +32,7 @@ namespace Fall2020_CSC403_Project
 
             newGame.UpdateSettings(changeSettings);
             newGame.Show();
-            
+
             menuMusic.Stop();
 
             Hide(); //can't Close(), will shut down entire application

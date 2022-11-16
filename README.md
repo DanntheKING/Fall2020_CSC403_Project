@@ -5,6 +5,8 @@
 
 ## Amiyah Frierson
 
+> Sprint 1
+
 ###### Main Menu
 To create the main menu, you have to create a new Windows Form and call it in Program.cs, replacing Application.Form(new FrmLevel()). In the designer window, I added 3 buttons that would start and quit the game, and open settings. Opening settings and starting the game is just a matter of Form.Show() and quitting the game closes the form that the application runs with.   
 
@@ -14,10 +16,21 @@ I added sound to the game with SoundPlayer class. I added two new songs (one for
 ###### Settings
 Create a new Windows Form that is called to show when you click the settings button in the main menu. The only button I added here in the designer was the “go back” button. I also have “full window” and “music on/off” settings as checkboxes. These settings were made to work across all forms by maximizing the game window when checked and carrying the “musicOn” boolean to when any FrmBattle opens.  
 
+> Sprint 2
 
+###### Health Bar
+I created a label that displays the player character's health. To change the color of the health as it got lower, I created static variables that represented the player's health at 60% and 30%. When the player reaches 60% health, the label will be colored orange. When you reach 30%, the label will be red. Otherwise, the player's health is considered to be "okay" and remain green. 
 
+###### Enemies Remaining Counter, Death, & Win Screen
+Created a new Windows Form that appears under the condition of the player's health reaching 0. It will close all other forms and give the player options to retry or restart. 
 
+I added a new label that displays the number of enemies on the map (unchanged from 4). Using the condition of when the enemies are made invisible, I counted down the number of enemies remaining. When this counter reaches zero, a "Win" screen will appear, closing all other forms and allowing the player to play again or quit the application. 
 
+###### "Pause" Form
+Created a pause menu that appears when you hit the escape key. It only allows you to resume the game (hiding this pause form) or quit to the main menu. 
+
+###### Scaling Issues
+There is an issue where the game has different scaling across hardware. I attempted to fix this by disabling the AutoScaleMode property on all the Forms that had this issue. 
 
 ## Daniel Davis:
 1.) Added the heart image that will be shown the map to so the player has a visual image of a heart
@@ -47,3 +60,5 @@ Create a new Windows Form that is called to show when you click the settings but
 3. I added the finisher button to the battle screen. If the enemy's health is beneath 10 and the player has more health than the enemy, then clciking the button subtracts (-6) health points from enemy. 
 4. I created another public variable to the enemy class called 'Boss,' with public get and set, to assign a specific enemy as the boss of the level.
 5. I added a conditional statement to the 'GetInstance()' function that increases the enemies max health and health to 60, instead of the normal 20. 
+6. I created two windows forms that display dialogue between NPCs and the playable character.
+7. I added two NPCs to the map, and when the player interacts with them it displays a dialogue scene between the player and NPC.
