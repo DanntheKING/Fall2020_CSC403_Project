@@ -5,6 +5,8 @@
 
 ## Amiyah Frierson
 
+> Sprint 1
+
 ###### Main Menu
 To create the main menu, you have to create a new Windows Form and call it in Program.cs, replacing Application.Form(new FrmLevel()). In the designer window, I added 3 buttons that would start and quit the game, and open settings. Opening settings and starting the game is just a matter of Form.Show() and quitting the game closes the form that the application runs with.   
 
@@ -14,10 +16,20 @@ I added sound to the game with SoundPlayer class. I added two new songs (one for
 ###### Settings
 Create a new Windows Form that is called to show when you click the settings button in the main menu. The only button I added here in the designer was the “go back” button. I also have “full window” and “music on/off” settings as checkboxes. These settings were made to work across all forms by maximizing the game window when checked and carrying the “musicOn” boolean to when any FrmBattle opens.  
 
+> Sprint 2
 
+###### Health Bar
 
+###### Enemies Remaining Counter 
 
+###### Death Screen
+Create a new Windows Form that appears under the condition of the player's health reaching 0. 
 
+###### Win Screen 
+
+###### "Pause" Form
+
+###### Scaling Issues
 
 ## Daniel Davis:
 1.) Added the heart image that will be shown the map to so the player has a visual image of a heart
