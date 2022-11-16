@@ -68,6 +68,7 @@ namespace Fall2020_CSC403_Project {
       dangerHealth = 0.3 * getHealth;
 
       UpdateHealthText();
+      UpdateEnemyTracker();
     }
 
     private Vector2 CreatePosition(PictureBox pic) {
@@ -215,14 +216,12 @@ namespace Fall2020_CSC403_Project {
                 label1.ForeColor = Color.LawnGreen;
             }
 
-            Console.WriteLine(Convert.ToString(player.MaxHealth));
-
             label1.Text = "Health: " + playerHealth;
         }
     
     public void UpdateEnemyTracker()
         {
-            label2.Text = "Enemies remaining: " + Convert.ToString(countEnemies);
+            label2.Text = "Enemies Remaining: " + Convert.ToString(countEnemies);
         }
     }
 

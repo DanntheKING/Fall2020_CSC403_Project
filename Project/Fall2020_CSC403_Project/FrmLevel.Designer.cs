@@ -330,9 +330,9 @@
             this.label2.Location = new System.Drawing.Point(1070, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(402, 50);
+            this.label2.Size = new System.Drawing.Size(361, 50);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Enemies Remaining: 4";
+            this.label2.Text = "Enemies Remaining";
             // 
             // FrmLevel
             // 
