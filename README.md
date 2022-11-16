@@ -37,6 +37,11 @@ There is an issue where the game has different scaling across hardware. I attemp
 2.) I placed the heart on the map so the player can walk over the heart to gain health points
 3.) I made the heart worth 5 health points
 
+> Sprint 2
+1.) Added more hearts to the game to give player more hp in one round
+2.) Added armor to the game so the player can have more resistance while fighting the enemies
+3.) Made the characters dissappear when the enenies HP=0
+
 
 
 
