@@ -28,7 +28,7 @@ namespace Fall2020_CSC403_Project {
     private double okayHealth;
     private double dangerHealth;
 
-    public int countEnemies = 4;
+    public int countEnemies = 3;
 
     public FrmLevel() {
       InitializeComponent();
@@ -196,7 +196,6 @@ namespace Fall2020_CSC403_Project {
             }
 
             lvlMusicOn = s.musicOn;
-
         }
 
     public void UpdateHealthText()

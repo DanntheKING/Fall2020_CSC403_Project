@@ -70,6 +70,12 @@
     <Compile Include="FrmPause.Designer.cs">
       <DependentUpon>FrmPause.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWin.Designer.cs">
+      <DependentUpon>FrmWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPause.resx">
       <DependentUpon>FrmPause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWin.resx">
+      <DependentUpon>FrmWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -209,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data\deathTheme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\winBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\winTheme.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
