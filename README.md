@@ -47,3 +47,4 @@ Create a new Windows Form that is called to show when you click the settings but
 3. I added the finisher button to the battle screen. If the enemy's health is beneath 10 and the player has more health than the enemy, then clciking the button subtracts (-6) health points from enemy. 
 4. I created another public variable to the enemy class called 'Boss,' with public get and set, to assign a specific enemy as the boss of the level.
 5. I added a conditional statement to the 'GetInstance()' function that increases the enemies max health and health to 60, instead of the normal 20. 
+6. I created two windows forms that display dialogue between NPCs and the playable character.

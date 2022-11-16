@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogue.Designer.cs">
+      <DependentUpon>Dialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogue2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogue2.Designer.cs">
+      <DependentUpon>Dialogue2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBattle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dialogue.resx">
+      <DependentUpon>Dialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogue2.resx">
+      <DependentUpon>Dialogue2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,5 +173,12 @@
   <ItemGroup>
     <None Include="data\hurtSFX.wav" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="data\prisoner.png" />
+    <Content Include="data\survivor.png" />
+    <Content Include="data\villager.png" />
+  </ItemGroup>
+  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -48,7 +48,9 @@ namespace Fall2020_CSC403_Project {
         instance.enemy = enemy;
         if(instance.enemy.Boss == true)
         {
-          instance.enemy.MaxHealth = 150;
+
+          instance.enemy.MaxHealth = 100;
+
           instance.enemy.Health = instance.enemy.MaxHealth;
         }
         instance.Setup();
@@ -116,7 +118,7 @@ namespace Fall2020_CSC403_Project {
     {
         if(enemy.Health < 20 && player.Health > enemy.Health) 
         {
-            player.OnAttack(-6);
+            player.OnAttack(-(enemy.Health));
         }
         UpdateHealthBars();
         if(player.Health <= 0 || enemy.Health <= 0) 

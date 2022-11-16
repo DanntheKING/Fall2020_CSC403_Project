@@ -10,9 +10,24 @@ using System.Collections.Generic;
 namespace Fall2020_CSC403_Project {
 
 
+    private Enemy enemyPoisonPacket;
+    public Enemy bossKoolaid;
+    private Enemy enemyCheeto;
+    private Character[] walls;
+    private Heart hearts;
+    private NPC villager;
+    private NPC prisoner;
+
+    private DateTime timeBegin;
+    private FrmBattle frmBattle;
+    private Dialogue villagerConvo;
+    private Dialogue2 prisonerConvo;
+
+
     public partial class FrmLevel : Form
     {
         private Player player;
+
 
 
         private Enemy enemyPoisonPacket;
@@ -22,8 +37,42 @@ namespace Fall2020_CSC403_Project {
         private Character[] walls;
         private Heart hearts;
 
+    private void FrmLevel_Load(object sender, EventArgs e) {
+      const int PADDING = 7;
+      const int NUM_WALLS = 13;
+
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+      hearts = new Heart(CreatePosition(picHeart), CreateCollider(picHeart, PADDING));
+      bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
+      enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
+      enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      
+      villager = new NPC(CreatePosition(pictureBox2), CreateCollider(pictureBox2, PADDING));
+      prisoner = new NPC(CreatePosition(pictureBox3), CreateCollider(pictureBox3, PADDING));
+      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+      enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
+      enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+
+      bossKoolaid.Color = Color.Red;
+      enemyPoisonPacket.Color = Color.Green;
+      enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+            
+
+
+      // Determine who is the boss of the level
+      bossKoolaid.Boss = true;
+      enemyPoisonPacket.Boss = false;
+      enemyCheeto.Boss = false;
+
+      walls = new Character[NUM_WALLS];
+      for (int w = 0; w < NUM_WALLS; w++) {
+        PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
+        walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
+      }
+
         private DateTime timeBegin;
         private FrmBattle frmBattle;
+
 
         int index;
 
@@ -124,6 +173,41 @@ namespace Fall2020_CSC403_Project {
       }
 
 
+      // check collision with enemies
+      if (HitAChar(player, enemyPoisonPacket)) {
+        Fight(enemyPoisonPacket);
+      }
+      else if (HitAChar(player, enemyCheeto)) {
+        Fight(enemyCheeto);
+      }
+      if (HitAChar(player, bossKoolaid)) {
+        Fight(bossKoolaid);
+      }
+      if (HitAChar(player, hearts) & player.Health != player.MaxHealth){
+          player.Health += 5;
+          picHeart.Location = new Point(1000, 1000);
+            player.MaxHealth = player.Health;
+          System.Console.WriteLine("Hit heart!!!");
+      }
+      if(HitAChar(player, hearts) & player.Health == player.MaxHealth){
+          picHeart.Location = new Point(1000, 1000);
+     
+      }
+      if (HitAChar(player, villager)) {
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        villagerConvo = new Dialogue();
+        villagerConvo.Show();
+      }
+
+      if(HitAChar(player, prisoner)){
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        prisonerConvo = new Dialogue2();
+        prisonerConvo.Show();
+      }
+
+
             //Player goes faster if shift key is pressed
             if (Control.ModifierKeys == Keys.Shift)
             {
@@ -191,6 +275,7 @@ namespace Fall2020_CSC403_Project {
                 this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.sniper;
                 this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_sniper;
             }
+
 
 
             // update player's picture box

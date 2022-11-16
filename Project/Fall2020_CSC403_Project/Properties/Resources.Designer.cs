@@ -122,6 +122,11 @@ namespace Fall2020_CSC403_Project.Properties {
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
 
+        internal static System.Drawing.Bitmap Game_Title {
+            get {
+                object obj = ResourceManager.GetObject("Game Title", resourceCulture);
+
+
 
         internal static System.Drawing.Bitmap rpg
         {
@@ -164,21 +169,22 @@ namespace Fall2020_CSC403_Project.Properties {
         {
             get{
                 object obj = ResourceManager.GetObject("heart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-        internal static System.Drawing.Bitmap Game_Title {
-            get {
-                object obj = ResourceManager.GetObject("Game Title", resourceCulture);
 
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
- 
-
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart {
+            get {
+                object obj = ResourceManager.GetObject("heart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream main_menu {
@@ -206,7 +212,6 @@ namespace Fall2020_CSC403_Project.Properties {
         }
         
         /// <summary>
-
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap player {
@@ -252,6 +257,36 @@ namespace Fall2020_CSC403_Project.Properties {
             get
             {
                 object obj = ResourceManager.GetObject("m16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prisoner {
+            get {
+                object obj = ResourceManager.GetObject("prisoner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap survivor {
+            get {
+                object obj = ResourceManager.GetObject("survivor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap villager {
+            get {
+                object obj = ResourceManager.GetObject("villager", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
