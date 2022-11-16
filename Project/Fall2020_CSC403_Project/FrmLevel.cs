@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Media;
 using Fall2020_CSC403_Project.Properties;
 using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 namespace Fall2020_CSC403_Project {
 
@@ -72,7 +73,7 @@ namespace Fall2020_CSC403_Project {
             }
             if (index == 1)
             {
-                this.picGun.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.m16;
+                this.picGun.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.rpg;
 
             }
             if (index == 2)
@@ -179,8 +180,8 @@ namespace Fall2020_CSC403_Project {
                 //this.picGun.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.null;
                 this.picGun.Size = new System.Drawing.Size(200, 75);
                 this.picGun.Location = new System.Drawing.Point(-500, -500);
-                this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.m16;
-                this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_m16;
+                this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.rpg;
+                this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_rpg;
             }
 
             if ((HitAChar(player, weapon) && (index == 2)))
