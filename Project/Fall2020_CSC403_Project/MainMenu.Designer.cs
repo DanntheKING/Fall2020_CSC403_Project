@@ -86,6 +86,7 @@ namespace Fall2020_CSC403_Project
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
+
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Game_Title;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1346, 772);

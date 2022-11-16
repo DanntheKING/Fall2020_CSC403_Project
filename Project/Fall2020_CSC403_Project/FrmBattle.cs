@@ -31,7 +31,10 @@ namespace Fall2020_CSC403_Project {
 
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
+      player.AttackEvent += PlayerArmor;
       player.AttackEvent += EnemyDamage;
+      
+      
 
       // show health
       UpdateHealthBars();
@@ -49,6 +52,13 @@ namespace Fall2020_CSC403_Project {
       if (instance == null) {
         instance = new FrmBattle();
         instance.enemy = enemy;
+        if(instance.enemy.Boss == true)
+        {
+
+          instance.enemy.MaxHealth = 100;
+
+          instance.enemy.Health = instance.enemy.MaxHealth;
+        }
         instance.Setup();
       }
       return instance;
@@ -56,20 +66,30 @@ namespace Fall2020_CSC403_Project {
 
     private void UpdateHealthBars() {
       float playerHealthPer = player.Health / (float)player.MaxHealth;
+      float playerArmorPer = player.Armors / (float)player.MaxArmor;
       float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
 
       const int MAX_HEALTHBAR_WIDTH = 226;
       lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
+      lblPlayerArmorFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerArmorPer);
       lblEnemyHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
 
       lblPlayerHealthFull.Text = player.Health.ToString();
+      lblPlayerArmorFull.Text = player.Armors.ToString();
       lblEnemyHealthFull.Text = enemy.Health.ToString();
     }
-
+    
     private void btnAttack_Click(object sender, EventArgs e) {
       player.OnAttack(-2);
       if (enemy.Health > 0) {
-        enemy.OnAttack(-1);
+      if (player.Armors > 0 & player.Armors < 51)
+      {
+          PlayerArmor(-4);
+      }
+      else
+      {
+          enemy.OnAttack(-2);
+      }
       }
 
 
@@ -100,12 +120,13 @@ namespace Fall2020_CSC403_Project {
         {
             UpdateHealthBars();
             instance = null;
+            music.Stop();
             Close();
         }
     }
     // Counter button
     private void btnCounter_Click(object sender, EventArgs e) 
-    {   enemy.OnAttack(-1);
+    {   enemy.OnAttack(-2);
         if(player.Health > 0)
         {
             player.OnAttack(-1);
@@ -114,6 +135,7 @@ namespace Fall2020_CSC403_Project {
         if(player.Health <= 0 || enemy.Health <= 0) 
         { 
             instance = null;
+            music.Stop();
             Close();
         }
     }
@@ -121,14 +143,15 @@ namespace Fall2020_CSC403_Project {
     // Finisher button
     private void btnFinisher_Click(object sender, EventArgs e)
     {
-        if(enemy.Health < 10 && player.Health > enemy.Health) 
+        if(enemy.Health < 20 && player.Health > enemy.Health) 
         {
-            player.OnAttack(-6);
+            player.OnAttack(-(enemy.Health));
         }
         UpdateHealthBars();
         if(player.Health <= 0 || enemy.Health <= 0) 
         { 
             instance = null;
+            music.Stop();
             Close();
         }
     
@@ -141,7 +164,12 @@ namespace Fall2020_CSC403_Project {
       player.AlterHealth(amount);
     }
 
-    private void tmrFinalBattle_Tick(object sender, EventArgs e) {
+    private void PlayerArmor(int amount)
+    {
+        player.AlterArmor(amount);
+    }
+
+        private void tmrFinalBattle_Tick(object sender, EventArgs e) {
       picBossBattle.Visible = false;
       tmrFinalBattle.Enabled = false;
     }
