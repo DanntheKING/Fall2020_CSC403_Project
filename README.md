@@ -19,17 +19,18 @@ Create a new Windows Form that is called to show when you click the settings but
 > Sprint 2
 
 ###### Health Bar
+I created a label that displays the player character's health. To change the color of the health as it got lower, I created static variables that represented the player's health at 60% and 30%. When the player reaches 60% health, the label will be colored orange. When you reach 30%, the label will be red. Otherwise, the player's health is considered to be "okay" and remain green. 
 
-###### Enemies Remaining Counter 
+###### Enemies Remaining Counter, Death, & Win Screen
+Created a new Windows Form that appears under the condition of the player's health reaching 0. It will close all other forms and give the player options to retry or restart. 
 
-###### Death Screen
-Create a new Windows Form that appears under the condition of the player's health reaching 0. 
-
-###### Win Screen 
+I added a new label that displays the number of enemies on the map (unchanged from 4). Using the condition of when the enemies are made invisible, I counted down the number of enemies remaining. When this counter reaches zero, a "Win" screen will appear, closing all other forms and allowing the player to play again or quit the application. 
 
 ###### "Pause" Form
+Created a pause menu that appears when you hit the escape key. It only allows you to resume the game (hiding this pause form) or quit to the main menu. 
 
 ###### Scaling Issues
+There is an issue where the game has different scaling across hardware. I attempted to fix this by disabling the AutoScaleMode property on all the Forms that had this issue. 
 
 ## Daniel Davis:
 1.) Added the heart image that will be shown the map to so the player has a visual image of a heart
