@@ -61,9 +61,8 @@
             this.picWall8 = new System.Windows.Forms.PictureBox();
             this.picGun = new System.Windows.Forms.PictureBox();
             this.picWall1 = new System.Windows.Forms.PictureBox();
-            this.picWall2 = new System.Windows.Forms.PictureBox();
             this.picWall11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.picWall13 = new System.Windows.Forms.PictureBox();
             this.picWall14 = new System.Windows.Forms.PictureBox();
             this.picWall15 = new System.Windows.Forms.PictureBox();
@@ -97,7 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall15)).BeginInit();
@@ -514,30 +513,6 @@
             this.picGun.TabIndex = 1;
             this.picGun.TabStop = false;
             // 
-            // picWall1
-            // 
-            this.picWall1.BackColor = System.Drawing.Color.Transparent;
-            this.picWall1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
-            this.picWall1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWall1.Location = new System.Drawing.Point(24, -31);
-            this.picWall1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.picWall1.Name = "picWall1";
-            this.picWall1.Size = new System.Drawing.Size(624, 78);
-            this.picWall1.TabIndex = 13;
-            this.picWall1.TabStop = false;
-            // 
-            // picWall2
-            // 
-            this.picWall2.BackColor = System.Drawing.Color.Transparent;
-            this.picWall2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
-            this.picWall2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWall2.Location = new System.Drawing.Point(646, -39);
-            this.picWall2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.picWall2.Name = "picWall2";
-            this.picWall2.Size = new System.Drawing.Size(580, 86);
-            this.picWall2.TabIndex = 16;
-            this.picWall2.TabStop = false;
-            // 
             // picWall11
             // 
             this.picWall11.BackColor = System.Drawing.Color.Transparent;
@@ -550,16 +525,16 @@
             this.picWall11.TabIndex = 17;
             this.picWall11.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBox10
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 793);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 127);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(25, 793);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox10.Name = "pictureBox1";
+            this.pictureBox10.Size = new System.Drawing.Size(150, 127);
+            this.pictureBox10.TabIndex = 18;
+            this.pictureBox10.TabStop = false;
             // 
             // picWall13
             // 
@@ -766,18 +741,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
@@ -846,8 +809,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
 
         private System.Windows.Forms.PictureBox picGun;
-        private System.Windows.Forms.PictureBox pictureBox1;
-    private System.Windows.Forms.PictureBox picWall1;
+        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox picWall13;
         private System.Windows.Forms.PictureBox picWall14;
         private System.Windows.Forms.PictureBox picWall15;
