@@ -23,6 +23,13 @@ namespace Fall2020_CSC403_Project {
         private Heart hearts;
         private NPC villager;
         private NPC prisoner;
+        private Weapon weapon;
+        public MainMenu getMainMenu;
+
+        SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
+        public bool lvlMusicOn;
+        public bool isKoolAidMan = false;
+
 
         private DateTime timeBegin;
         private FrmBattle frmBattle;
@@ -46,6 +53,7 @@ namespace Fall2020_CSC403_Project {
             enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
             villager = new NPC(CreatePosition(pictureBox2), CreateCollider(pictureBox2, PADDING));
             prisoner = new NPC(CreatePosition(pictureBox3), CreateCollider(pictureBox3, PADDING));
+            weapon = new Weapon(CreatePosition(pictureBox1), CreateCollider(pictureBox1, PADDING));
 
             bossKoolaid.Img = picBossKoolAid.BackgroundImage;
             enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
