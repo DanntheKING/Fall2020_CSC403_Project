@@ -49,9 +49,20 @@ There is an issue where the game has different scaling across hardware. I attemp
 
 
 ## Frankie Lavall: 
+SPRINT 1
+Weapons
 1. I added 3 different weapons to the game which are ak47, m16, sniper. I added a picture box to the FrmLevel.Designer.cs file which is called PicGun. It creates a box that holds pictures of each weapon. I also added the images of weapons and player holding weapons to the resource.resx and added code for each weapon to the Resource.Design.cs file. All of these steps allow the images of the items in need to be used in code.
 2. I then added a variable to the FrmLevel.cs file that randomly iterated a list to pick which weapon would show up in the level. Then used the HitAChar function to determine when the player collides with the weapon. I also made a BoostAttack function to use when ever the weapon is picked up and you are in a fight sequence.
-3. I also added a inventory window that shows the weapon that you have picked up using a picturebox window.
+Weapon Inventory
+1. I also added a inventory window that shows the weapon that you have picked up using a picturebox window.
+
+SPRINT 2
+Bigger Map
+1. I made the objects and characters smaller using the FrmLevel.cs(design) file. It allowed me to move objects around easily and it updated the code on its own. I moved objects and also added more objects in that file. 
+2. I also changed the type of bricks that were used in the game just to give it a different look. I added that new picture to the resource files in order for me to add it to the designer files.
+Player Sprint
+1. I added a function that would allow the player to sprint when the left or right shift key is pressed using the ControlModifier function.
+
 
 
 
