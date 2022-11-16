@@ -28,6 +28,8 @@
             this.lblInGameTime = new System.Windows.Forms.Label();
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picEnemyCheeto = new System.Windows.Forms.PictureBox();
@@ -36,6 +38,8 @@
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.picHeart = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+
             this.picHeart2 = new System.Windows.Forms.PictureBox();
             this.picArmor = new System.Windows.Forms.PictureBox();
             this.picWall5 = new System.Windows.Forms.PictureBox();
@@ -72,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.picHeart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArmor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall5)).BeginInit();
@@ -106,8 +111,9 @@
             // 
             this.lblInGameTime.AutoSize = true;
             this.lblInGameTime.BackColor = System.Drawing.Color.Black;
-            this.lblInGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInGameTime.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInGameTime.ForeColor = System.Drawing.Color.White;
+
             this.lblInGameTime.Location = new System.Drawing.Point(18, 14);
             this.lblInGameTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInGameTime.Name = "lblInGameTime";
@@ -126,6 +132,19 @@
             this.tmrPlayerMove.Interval = 20;
             this.tmrPlayerMove.Tick += new System.EventHandler(this.tmrPlayerMove_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(24, 1269);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 50);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "health status";
+            
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -153,6 +172,7 @@
             this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_cheetos;
             this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             this.picEnemyCheeto.Location = new System.Drawing.Point(632, 623);
             this.picEnemyCheeto.Name = "picEnemyCheeto";
             this.picEnemyCheeto.Size = new System.Drawing.Size(64, 106);
@@ -164,6 +184,7 @@
             this.picEnemyPoisonPacket.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyPoisonPacket.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket;
             this.picEnemyPoisonPacket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             this.picEnemyPoisonPacket.Location = new System.Drawing.Point(68, 167);
             this.picEnemyPoisonPacket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picEnemyPoisonPacket.Name = "picEnemyPoisonPacket";
@@ -176,6 +197,7 @@
             this.picWall3.BackColor = System.Drawing.Color.Transparent;
             this.picWall3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.stone_wall;
             this.picWall3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             this.picWall3.Location = new System.Drawing.Point(28, 439);
             this.picWall3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picWall3.Name = "picWall3";
@@ -188,6 +210,7 @@
             this.picBossKoolAid.BackColor = System.Drawing.Color.Transparent;
             this.picBossKoolAid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBossKoolAid.BackgroundImage")));
             this.picBossKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             this.picBossKoolAid.Location = new System.Drawing.Point(554, 56);
             this.picBossKoolAid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBossKoolAid.Name = "picBossKoolAid";
@@ -200,6 +223,7 @@
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
             this.picPlayer.Location = new System.Drawing.Point(249, 614);
             this.picPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.picPlayer.Name = "picPlayer";
@@ -219,6 +243,18 @@
             this.picHeart.TabIndex = 0;
             this.picHeart.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1070, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(361, 50);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Enemies Remaining";
             // picHeart2
             // 
             this.picHeart2.BackColor = System.Drawing.Color.Transparent;
@@ -557,6 +593,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(2352, 1396);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.ClientSize = new System.Drawing.Size(1646, 800);
             this.Controls.Add(this.picWall13);
             this.Controls.Add(this.picWall14);
@@ -598,11 +637,12 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmLevel";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Explore";
             this.Load += new System.EventHandler(this.FrmLevel_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLevel_KeyUp);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).EndInit();
@@ -611,6 +651,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.picHeart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArmor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall5)).EndInit();
@@ -668,7 +709,8 @@
     private System.Windows.Forms.PictureBox picWall8;
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
-
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
 
     private System.Windows.Forms.PictureBox picGun;
     private System.Windows.Forms.PictureBox pictureBox1;
@@ -687,7 +729,6 @@
     private System.Windows.Forms.PictureBox picWall22;
     private System.Windows.Forms.PictureBox picWall23;
     private System.Windows.Forms.PictureBox picWall24;
-
 
     }
 }

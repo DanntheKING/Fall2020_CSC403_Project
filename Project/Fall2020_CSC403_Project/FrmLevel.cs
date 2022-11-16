@@ -8,7 +8,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 
 namespace Fall2020_CSC403_Project {
-
     public partial class FrmLevel : Form   
     {
         private Player player;
@@ -23,13 +22,20 @@ namespace Fall2020_CSC403_Project {
         private NPC prisoner;
         private Weapon weapon;
         public MainMenu getMainMenu;
+        
+        
 
 
             SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound); 
             public bool lvlMusicOn;
             public bool isKoolAidMan = false;
 
+        
+             private int getMaxHealth;
+            private double okayHealth;
+            private double dangerHealth;
 
+            public int countEnemies = 3;
 
             private DateTime timeBegin;
             private FrmBattle frmBattle;
@@ -104,6 +110,16 @@ namespace Fall2020_CSC403_Project {
 
                 Game.player = player;
                 timeBegin = DateTime.Now;
+                
+                
+      getMaxHealth = player.MaxHealth;
+      double getHealth = (double)getMaxHealth; //cast for operations below
+
+      okayHealth = 0.6 * getHealth;
+      dangerHealth = 0.3 * getHealth;
+
+      UpdateHealthText();
+      UpdateEnemyTracker();
             }
 
             private Vector2 CreatePosition(PictureBox pic) {
@@ -160,6 +176,7 @@ namespace Fall2020_CSC403_Project {
             if (HitAChar(player, hearts) & player.Health == player.MaxHealth)
             {
                 picHeart.Location = new Point(1000, 1000);
+                UpdateHealthText();
 
             }
 
@@ -316,6 +333,30 @@ namespace Fall2020_CSC403_Project {
 
         }
 
+    public void UpdateHealthText()
+        {
+            string playerHealth = Convert.ToString(player.Health);
+
+            if (player.Health <= dangerHealth)
+            {
+                label1.ForeColor = Color.Red;
+            }
+            else if (player.Health <= okayHealth)
+            {
+                label1.ForeColor = Color.Orange;
+            }
+            else
+            {
+                label1.ForeColor = Color.LawnGreen;
+            }
+
+            label1.Text = "Health: " + playerHealth;
+        }
+    
+    public void UpdateEnemyTracker()
+        {
+            label2.Text = "Enemies Remaining: " + Convert.ToString(countEnemies);
+        }
 
                 private bool HitAWall(Character c) {
                     bool hitAWall = false;
@@ -377,6 +418,12 @@ namespace Fall2020_CSC403_Project {
                         case Keys.Down:
                             player.GoDown();
                             break;
+                            
+                        case Keys.Escape:
+                            FrmPause pauseMenu = new FrmPause();
+                            pauseMenu.Show();
+                            pauseMenu.getGameLevel = this;
+                            break;
 
                         default:
                             player.ResetMoveSpeed();
@@ -408,8 +455,6 @@ namespace Fall2020_CSC403_Project {
 
                     lvlMusicOn = s.musicOn;
                 }
-
-            
 
          } 
 }   

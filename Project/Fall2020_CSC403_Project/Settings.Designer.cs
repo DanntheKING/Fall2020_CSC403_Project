@@ -43,9 +43,9 @@ namespace Fall2020_CSC403_Project
             startButton.BackColor = System.Drawing.Color.Black;
             startButton.Font = new System.Drawing.Font("Segoe UI Black", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             startButton.ForeColor = System.Drawing.Color.Gold;
-            startButton.Location = new System.Drawing.Point(746, 821);
+            startButton.Location = new System.Drawing.Point(108, 474);
             startButton.Name = "startButton";
-            startButton.Size = new System.Drawing.Size(409, 108);
+            startButton.Size = new System.Drawing.Size(284, 99);
             startButton.TabIndex = 3;
             startButton.Text = "GO BACK";
             startButton.UseVisualStyleBackColor = false;
@@ -53,13 +53,15 @@ namespace Fall2020_CSC403_Project
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 25.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(769, 108);
+            this.label1.Location = new System.Drawing.Point(67, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(373, 92);
             this.label1.TabIndex = 6;
             this.label1.Text = "SETTINGS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkBox1
             // 
@@ -70,7 +72,7 @@ namespace Fall2020_CSC403_Project
             this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(808, 401);
+            this.checkBox1.Location = new System.Drawing.Point(108, 245);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(268, 63);
@@ -90,7 +92,7 @@ namespace Fall2020_CSC403_Project
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(808, 511);
+            this.checkBox2.Location = new System.Drawing.Point(108, 314);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(172, 63);
@@ -101,10 +103,9 @@ namespace Fall2020_CSC403_Project
             // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.ClientSize = new System.Drawing.Size(520, 655);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);

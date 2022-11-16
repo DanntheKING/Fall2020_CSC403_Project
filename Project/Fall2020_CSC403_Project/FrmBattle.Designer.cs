@@ -23,7 +23,26 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
- 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(140, 113);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(458, 44);
+            this.label1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(1030, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(458, 44);
+            this.label2.TabIndex = 5;
+
       this.components = new System.ComponentModel.Container();
       this.btnAttack = new System.Windows.Forms.Button();
       this.btnRetreat = new System.Windows.Forms.Button();
@@ -220,7 +239,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
       this.ResumeLayout(false);
-
     }
 
     #endregion
