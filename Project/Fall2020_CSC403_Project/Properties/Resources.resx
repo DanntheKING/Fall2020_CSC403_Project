@@ -157,6 +157,7 @@
   <data name="heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\Heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+
   <data name="survivor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\survivor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,5 +166,27 @@
   </data>
   <data name="prisoner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\prisoner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
+  <data name="ak47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\ak47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_ak47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\player_ak47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_sniper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\player_sniper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sniper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\sniper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stone_wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Downloads\Stone_wall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_rpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\player_rpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\rpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
   </data>
 </root>
