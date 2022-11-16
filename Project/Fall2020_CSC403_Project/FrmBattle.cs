@@ -48,9 +48,7 @@ namespace Fall2020_CSC403_Project {
         instance.enemy = enemy;
         if(instance.enemy.Boss == true)
         {
-
           instance.enemy.MaxHealth = 100;
-
           instance.enemy.Health = instance.enemy.MaxHealth;
         }
         instance.Setup();

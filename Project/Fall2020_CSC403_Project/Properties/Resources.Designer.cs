@@ -69,15 +69,6 @@ namespace Fall2020_CSC403_Project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stone_wall {
-            get {
-                object obj = ResourceManager.GetObject("stone_wall", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -121,55 +112,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
         internal static System.Drawing.Bitmap Game_Title {
             get {
                 object obj = ResourceManager.GetObject("Game Title", resourceCulture);
-
-
-
-        internal static System.Drawing.Bitmap rpg
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("rpg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-
-
-        internal static System.Drawing.Bitmap ak47
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("ak47", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-
-
-        internal static System.Drawing.Bitmap sniper
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("sniper", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-        internal static System.Drawing.Bitmap heart
-        {
-            get{
-                object obj = ResourceManager.GetObject("heart", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -217,46 +162,6 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap player {
             get {
                 object obj = ResourceManager.GetObject("player", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-
-
-        internal static System.Drawing.Bitmap player_ak47
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("m16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap player_rpg
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("rpg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
-         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-
-
-        internal static System.Drawing.Bitmap player_sniper
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("m16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

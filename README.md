@@ -20,9 +20,6 @@ Create a new Windows Form that is called to show when you click the settings but
 
 
 ## Daniel Davis:
-1.) Added the heart image that will be shown the map to so the player has a visual image of a heart
-2.) I placed the heart on the map so the player can walk over the heart to gain health points
-3.) I made the heart worth 5 health points
 
 
 
@@ -31,9 +28,6 @@ Create a new Windows Form that is called to show when you click the settings but
 
 
 ## Frankie Lavall: 
-1. I added 3 different weapons to the game which are ak47, m16, sniper. I added a picture box to the FrmLevel.Designer.cs file which is called PicGun. It creates a box that holds pictures of each weapon. I also added the images of weapons and player holding weapons to the resource.resx and added code for each weapon to the Resource.Design.cs file. All of these steps allow the images of the items in need to be used in code.
-2. I then added a variable to the FrmLevel.cs file that randomly iterated a list to pick which weapon would show up in the level. Then used the HitAChar function to determine when the player collides with the weapon. I also made a BoostAttack function to use when ever the weapon is picked up and you are in a fight sequence.
-3. I also added a inventory window that shows the weapon that you have picked up using a picturebox window.
 
 
 

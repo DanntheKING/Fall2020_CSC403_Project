@@ -95,7 +95,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -173,12 +172,10 @@
   <ItemGroup>
     <None Include="data\hurtSFX.wav" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="data\prisoner.png" />
     <Content Include="data\survivor.png" />
     <Content Include="data\villager.png" />
   </ItemGroup>
-  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
