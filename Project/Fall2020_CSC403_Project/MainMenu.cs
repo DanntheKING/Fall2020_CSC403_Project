@@ -34,7 +34,6 @@ namespace Fall2020_CSC403_Project
             newGame.Show();
             newGame.getMainMenu = this;
             
-
             menuMusic.Stop();
 
             Hide(); //can't Close(), will shut down entire application
