@@ -30,19 +30,6 @@
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picWall11 = new System.Windows.Forms.PictureBox();
-            this.picWall2 = new System.Windows.Forms.PictureBox();
-            this.picWall8 = new System.Windows.Forms.PictureBox();
-            this.picWall7 = new System.Windows.Forms.PictureBox();
-            this.picWall1 = new System.Windows.Forms.PictureBox();
-            this.picWall0 = new System.Windows.Forms.PictureBox();
-            this.picWall10 = new System.Windows.Forms.PictureBox();
-            this.picWall9 = new System.Windows.Forms.PictureBox();
-            this.picWall6 = new System.Windows.Forms.PictureBox();
-            this.picWall12 = new System.Windows.Forms.PictureBox();
-            this.picWall4 = new System.Windows.Forms.PictureBox();
-            this.picWall5 = new System.Windows.Forms.PictureBox();
             this.picEnemyCheeto = new System.Windows.Forms.PictureBox();
             this.picEnemyPoisonPacket = new System.Windows.Forms.PictureBox();
             this.picWall3 = new System.Windows.Forms.PictureBox();
@@ -158,14 +145,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(222, 227);
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
             // 
             // picWall11
             // 
@@ -713,10 +692,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 
-            this.ClientSize = new System.Drawing.Size(2352, 1396);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+           
 
             this.ClientSize = new System.Drawing.Size(1852, 1000);
             this.Controls.Add(this.picWall13);
@@ -732,6 +708,8 @@
             this.Controls.Add(this.picWall23);
             this.Controls.Add(this.picWall24);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.picGun);
 
             this.Controls.Add(this.picWall11);
@@ -840,26 +818,24 @@
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
 
-    private System.Windows.Forms.PictureBox picWall1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
 
-        private System.Windows.Forms.PictureBox picGun;
-        private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox picGun;
+    private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox pictureBox2;
+    private System.Windows.Forms.PictureBox pictureBox3;
     private System.Windows.Forms.PictureBox picWall1;
-        private System.Windows.Forms.PictureBox picWall13;
-        private System.Windows.Forms.PictureBox picWall14;
-        private System.Windows.Forms.PictureBox picWall15;
-        private System.Windows.Forms.PictureBox picWall16;
-        private System.Windows.Forms.PictureBox picWall17;
-        private System.Windows.Forms.PictureBox picWall18;
-        private System.Windows.Forms.PictureBox picWall19;
-        private System.Windows.Forms.PictureBox picWall20;
-        private System.Windows.Forms.PictureBox picWall21;
-        private System.Windows.Forms.PictureBox picWall22;
-        private System.Windows.Forms.PictureBox picWall23;
-        private System.Windows.Forms.PictureBox picWall24;
+    private System.Windows.Forms.PictureBox picWall13;
+    private System.Windows.Forms.PictureBox picWall14;
+    private System.Windows.Forms.PictureBox picWall15;
+    private System.Windows.Forms.PictureBox picWall16;
+    private System.Windows.Forms.PictureBox picWall17;
+    private System.Windows.Forms.PictureBox picWall18;
+    private System.Windows.Forms.PictureBox picWall19;
+    private System.Windows.Forms.PictureBox picWall20;
+    private System.Windows.Forms.PictureBox picWall21;
+    private System.Windows.Forms.PictureBox picWall22;
+    private System.Windows.Forms.PictureBox picWall23;
+    private System.Windows.Forms.PictureBox picWall24;
 
 
     }
