@@ -35,6 +35,7 @@ namespace Fall2020_CSC403_Project {
         private FrmBattle frmBattle;
         private Dialogue villagerConvo;
         private Dialogue2 prisonerConvo;
+        int index;
 
 
         public FrmLevel()
