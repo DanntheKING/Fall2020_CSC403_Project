@@ -9,6 +9,16 @@ using System.Collections.Generic;
 
 namespace Fall2020_CSC403_Project {
 
+  public partial class FrmLevel : Form {
+    private Player player;
+    private Enemy enemyPoisonPacket;
+    public Enemy bossKoolaid;
+    private Enemy enemyCheeto;
+    private Character[] walls;
+    private Heart hearts;
+    private Heart twoHeart;
+    private Armor armor;
+
 
     
 
@@ -26,9 +36,42 @@ namespace Fall2020_CSC403_Project {
         private Weapon weapon;
         public MainMenu getMainMenu;
 
+
+    private void FrmLevel_Load(object sender, EventArgs e) {
+      const int PADDING = 7;
+      const int NUM_WALLS = 13;
+
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+      hearts = new Heart(CreatePosition(picHeart), CreateCollider(picHeart, PADDING));
+      twoHeart = new Heart(CreatePosition(picHeart2), CreateCollider(picHeart2, PADDING));
+      armor = new Armor(CreatePosition(picArmor), CreateCollider(picArmor, PADDING));
+      bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
+      enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
+      enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+
+      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+      enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
+      enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+
+      bossKoolaid.Color = Color.Red;
+      enemyPoisonPacket.Color = Color.Green;
+      enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+
+      // Determine who is the boss of the level
+      bossKoolaid.Boss = true;
+      enemyPoisonPacket.Boss = false;
+      enemyCheeto.Boss = false;
+
+      walls = new Character[NUM_WALLS];
+      for (int w = 0; w < NUM_WALLS; w++) {
+        PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
+        walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
+      }
+
         SoundPlayer walkSFX = new SoundPlayer(Resources.walkSound);
         public bool lvlMusicOn;
         public bool isKoolAidMan = false;
+
 
 
         private DateTime timeBegin;
@@ -129,6 +172,32 @@ namespace Fall2020_CSC403_Project {
 
   
 
+
+      // check collision with enemies
+      if (HitAChar(player, enemyPoisonPacket)) {
+        Fight(enemyPoisonPacket);
+      }
+      else if (HitAChar(player, enemyCheeto)) {
+        Fight(enemyCheeto);
+      }
+      if (HitAChar(player, bossKoolaid)) {
+        Fight(bossKoolaid);
+      }
+      while (player.Health < 200 & HitAChar(player, hearts))
+      {
+          if (HitAChar(player, hearts) & player.Health != player.MaxHealth)
+          {
+              player.Health += 5;
+              picHeart.Location = new Point(1000, 1000);
+              player.MaxHealth = 200;
+              // player.MaxHealth = player.Health;
+              System.Console.WriteLine("Hit heart!!!");
+          }
+      }
+      if(HitAChar(player, hearts) & player.Health == player.MaxHealth){
+          picHeart.Location = new Point(1000, 1000);
+     
+
             //Player goes faster if shift key is pressed
             if (Control.ModifierKeys == Keys.Shift)
             {
@@ -179,7 +248,66 @@ namespace Fall2020_CSC403_Project {
                 player.MoveBack();
                 prisonerConvo = new Dialogue2();
                 prisonerConvo.Show();
+
       }
+      if (HitAChar(player, bossKoolaid))
+      {
+          Fight(bossKoolaid);
+      }
+      while (player.Health < 200 & HitAChar(player, twoHeart))
+      {
+          if (HitAChar(player, twoHeart) & player.Health != player.MaxHealth)
+          {
+              player.Health += 5;
+              picHeart2.Location = new Point(1000, 1000);
+              player.MaxHealth = 200;
+              // player.MaxHealth = player.Health
+              System.Console.WriteLine("Hit heart!!!");
+          }
+      }
+      if (HitAChar(player, twoHeart) & player.Health == player.MaxHealth)
+      {
+          picHeart2.Location = new Point(1000, 1000);
+
+      }
+      if (enemyPoisonPacket.Health == 0){
+
+          picEnemyPoisonPacket.Visible = false;
+          enemyPoisonPacket.releaseCollider();
+          picEnemyPoisonPacket.Dispose();
+      
+
+      }
+      if (enemyCheeto.Health == 0)
+      {
+
+          picEnemyCheeto.Visible = false;
+          enemyCheeto.releaseCollider();
+          picEnemyCheeto.Dispose();
+
+      }
+      if (bossKoolaid.Health == 0)
+      {
+
+          picBossKoolAid.Visible = false;
+          bossKoolaid.releaseCollider();
+          picBossKoolAid.Dispose();
+
+      }
+      if(HitAChar(player, armor) & player.Armors < 50)
+      {
+          System.Console.WriteLine("Hit ARMOR!!!");
+          player.Armors += 5;
+          player.MaxArmor = 50;
+          picArmor.Location = new Point(1000, 1000);
+          
+                
+      }
+
+
+
+
+
 
 
             //Picks up weapon if collided with!

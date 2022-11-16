@@ -189,6 +189,9 @@
     <None Include="data\hurtSFX.wav" />
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="data\armor.png" />
+
     <Content Include="data\prisoner.png" />
     <Content Include="data\survivor.png" />
     <Content Include="data\villager.png" />
@@ -204,6 +207,7 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
