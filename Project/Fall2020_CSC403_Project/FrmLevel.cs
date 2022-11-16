@@ -9,7 +9,6 @@ using Fall2020_CSC403_Project.Properties;
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
     private Player player;
-
     private Enemy enemyPoisonPacket;
     public Enemy bossKoolaid;
     private Enemy enemyCheeto;
