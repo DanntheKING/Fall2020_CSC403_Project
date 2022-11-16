@@ -48,3 +48,4 @@ Create a new Windows Form that is called to show when you click the settings but
 4. I created another public variable to the enemy class called 'Boss,' with public get and set, to assign a specific enemy as the boss of the level.
 5. I added a conditional statement to the 'GetInstance()' function that increases the enemies max health and health to 60, instead of the normal 20. 
 6. I created two windows forms that display dialogue between NPCs and the playable character.
+7. I added two NPCs to the map, and when the player interacts with them it displays a dialogue scene between the player and NPC.
